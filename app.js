@@ -1,4 +1,5 @@
 console.log('Hello')
 let Name = 'Dmitrii'
-let Age ='30'
+const age = 27;
 let City = 'Saint Petersburg'
+console.log(age)
