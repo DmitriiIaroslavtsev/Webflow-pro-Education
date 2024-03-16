@@ -1,5 +1,6 @@
 console.log('Hello')
-let Name = 'Dmitrii'
+const Name = 'Dmitrii'
 const age = 27;
-let City = 'Saint Petersburg'
+const City = 'Saint Petersburg'
 console.log(age)
+console.log(City)
