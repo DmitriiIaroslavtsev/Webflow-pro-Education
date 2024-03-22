@@ -21,7 +21,6 @@ console.log(typeof responsive);*/
 
 let project = prompt('Название проекта?');
 console.log(project);
-let res = project;
 let screensValue = prompt('шаблонные, с уникальным дизайном, с анимациями');
 console.log(screensValue);
 let responsive = confirm ('Нужен ли адаптив');
@@ -30,9 +29,10 @@ let servicePrice1 = +prompt('СКолько это будет стоить?');
 let service2 = prompt('Какой еще сервис нужен?');
 let servicePrice2 = + prompt ( 'Сколько будет стоить второй сервис?');
 let screenPrice = 1000;
-let servicePercentPrice = (servicePrice1 + servicePrice2 + screenPrice) * 0.15
-servicePercentPrice = Math.round( servicePercentPrice);
-let fullPrice = servicePrice1 + servicePrice2 + screenPrice - servicePercentPrice;
+let percentage = 0.15;
+let fullPrice = servicePrice1 + servicePrice2 + screenPrice;
+let servicePercentPrice =  Math.round(fullPrice * 0.15);
+let totalPriceForMe = fullPrice - servicePercentPrice;
 if (fullPrice > 50000) {
     console.log('скидка в 10%');
 } else if (fullPrice >20000 && fullPrice <= 50000) {
@@ -43,4 +43,4 @@ if (fullPrice > 50000) {
 console.log('Что-то пошло не так');
 };
 console.log("Общая стоимость проекта: " + fullPrice);
-console.log("Итоговая сумма за вычетом процента : " + servicePercentPrice);
+console.log("Итоговая сумма за вычетом процента : " + totalPriceForMe);
